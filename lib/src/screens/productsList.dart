@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase/src/providers/firebase.dart';
+import 'package:firebase/src/screens/addProduct.dart';
 import 'package:firebase/src/views/CardProduct.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,8 @@ class _ProductsListState extends State<ProductsList> {
           MaterialButton(
               child: Icon(Icons.add_circle, color: Colors.amber),
               onPressed: () {
-                debugPrint("Agregando . . . ");
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => AddProduct()));
               })
         ],
       ),
